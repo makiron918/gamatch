@@ -1,0 +1,243 @@
+/* リセットCSS */
+
+html{
+  color:#000;
+  background:#FFF;
+}
+/*
+  TODO remove settings on BODY since we can't namespace it.
+*/
+/*
+  TODO test putting a class on HEAD.
+      - Fails on FF.
+*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin:0;
+  padding:0;
+}
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+fieldset,
+img {
+  border:0;
+}
+/*
+  TODO think about hanlding inheritence differently, maybe letting IE6 fail a bit...
+*/
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style:normal;
+  font-weight:normal;
+}
+
+ol,
+ul {
+  list-style:none;
+}
+
+caption,
+th {
+  text-align:left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size:100%;
+  font-weight:normal;
+}
+q:before,
+q:after {
+  content:'';
+}
+abbr,
+acronym {
+  border:0;
+  font-variant:normal;
+}
+/* to preserve line-height and selector appearance */
+sup {
+  vertical-align:text-top;
+}
+sub {
+  vertical-align:text-bottom;
+}
+input,
+textarea,
+select {
+  font-family:inherit;
+  font-size:inherit;
+  font-weight:inherit;
+}
+/*to enable resizing for IE*/
+input,
+textarea,
+select {
+  *font-size:100%;
+}
+/*because legend doesn't inherit in IE */
+legend {
+  color:#000;
+}
+/* YUI CSS Detection Stamp */
+#yui3-css-stamp.cssreset { display: none; }
+
+
+/* リセットCSSここまで */
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ヘッダー */
+
+header {
+  height: 60px;
+  width: 100%;
+  background-color: rgba(34, 49, 52, 0.9);
+  .container {
+    margin: 0 auto;
+    padding: 0 15px;
+    .header-left {
+      float: left;
+      width: 120px;
+      line-height: 60px;
+      font-size: 20px;
+      a {
+        color: white;
+      }
+    }
+    .header-right {
+      float: right;
+      a {
+        color: white;
+        line-height: 60px;
+        margin-left: 15px;
+      }
+      a:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+}
+
+/* トップラッパー */
+
+
+.top-wrapper {
+  padding: 180px 0 100px;
+  background-image: url(pixta_41059861_M.jpg);
+  background-size: cover;
+  background-repeat:  no-repeat;
+  .container {
+    width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+    h1 {
+      opacity: 0.7;
+      font-size: 45px;
+      letter-spacing: 5px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    p {
+      opacity: 0.7;
+      text-shadow: 1px 1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff, -1px -1px 0 #fff;
+    }
+    .btn-wrapper {
+      margin: 20px 0;
+      .index {
+        background-color: cadetblue;
+        color: white;
+        padding: 8px 20px;
+        border-radius: 4px;
+      }
+      .index:hover {
+        opacity: 0.7;
+      }
+      .user {
+        background-color: darkorange;
+        color: white;
+        padding: 8px 20px;
+        margin-left: 15px;
+        border-radius: 4px;
+      }
+      .user:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+/* ジャンルラッパー */
+
+.genre-wrapper {
+  height: 500px;
+  padding-bottom: 80px;
+  background-color: #f7f7f7;
+  .heading {
+    padding: 60px 0 30px;
+    color: #5f5d60;
+    h2 {
+      font-weight: normal;
+    }
+  }
+  .genre {
+    .game {
+      float: left;
+      width: 25%;
+    }
+  }
+}
+
+/* フッター */
+
+footer {
+  padding-top: 30px;
+  .container {
+    p {
+      color: #b3aeb5;
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+}
