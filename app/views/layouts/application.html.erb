@@ -18,11 +18,19 @@
           <a href="/">GaMatch</a>
         </h1>
 
-        <div class="header-right">
-          <a href="#" class="users-index">ユーザーを探す</a>
-          <a href="#" class="login">ログイン</a>
-          <a href="#" class="user-register">新規登録</a>
-        </div>
+        <% if user_signed_in? %>
+          <div class="header-right">
+            <a href="#" class="users-index">ユーザーを探す</a>
+            <a href="#" class="login">ログイン</a>
+            <a href="#" class="user-register">新規登録</a>
+          </div>
+        <% else %>
+          <div class="header-right">
+            <a href="#" class="users-index">ユーザーを探す</a>
+            <a href="#" class="login">ログイン</a>
+            <a href="#" class="user-register">新規登録</a>
+          </div>
+        
 
       </div>
     </header>
