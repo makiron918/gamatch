@@ -134,6 +134,9 @@ header {
   height: 60px;
   width: 100%;
   background-color: rgba(34, 49, 52, 0.9);
+  position: fixed;
+  top: 0;
+  z-index: 10;
   .container {
     margin: 0 auto;
     padding: 0 15px;
@@ -225,6 +228,30 @@ header {
     .game {
       float: left;
       width: 25%;
+      .game-icon1 {
+        background-image: url(MHW.jpg);
+        height: 200px;
+        background-size: cover;
+        background-repeat:  no-repeat;
+      }
+      .game-icon2 {
+        background-image: url(4733.jpg);
+        height: 200px;
+        background-size: cover;
+        background-repeat:  no-repeat;
+      }
+      .game-icon3 {
+        background-image: url(1_3qfvh3oerw01p4o77f0t4.jpg);
+        height: 200px;
+        background-size: cover;
+        background-repeat:  no-repeat;
+      }
+      .game-icon4 {
+        background-image: url(top.jpg);
+        height: 200px;
+        background-size: cover;
+        background-repeat:  no-repeat;
+      }
     }
   }
 }

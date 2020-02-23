@@ -21,16 +21,16 @@
         <% if user_signed_in? %>
           <div class="header-right">
             <a href="#" class="users-index">ユーザーを探す</a>
-            <a href="#" class="login">ログイン</a>
-            <a href="#" class="user-register">新規登録</a>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+            <%= link_to current_user.nickname, user_path(current_user.id) %>
           </div>
         <% else %>
           <div class="header-right">
             <a href="#" class="users-index">ユーザーを探す</a>
-            <a href="#" class="login">ログイン</a>
-            <a href="#" class="user-register">新規登録</a>
+            <%= link_to "ログイン", new_user_session_path, class: 'post' %>
+            <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
           </div>
-        
+        <% end %>
 
       </div>
     </header>
