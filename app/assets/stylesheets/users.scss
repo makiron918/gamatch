@@ -5,9 +5,18 @@
 .contents_row {
   height: auto;
   width: 1170px;
+  margin: 0 auto;
+  padding-top: 60px;
+  .all-users {
+    height: 60px;
+    line-height: 60px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    background-color: lightgrey;
+  }
   .icon_image {
-    /* width: 200px;
-    height: 200px; */
+    width: 200px;
+    height: 200px;
     //サイズ指定
     border-radius: 100px;
     //画像を丸くする
@@ -16,4 +25,6 @@
   }
 } 
 
-
+.user-info {
+  // float: left;
+}

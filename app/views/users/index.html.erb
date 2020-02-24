@@ -1,0 +1,9 @@
+<div class="contents_row">
+  <p class="all-users">ユーザー 一覧</p>
+  <% @users.each do |user| %>
+    <div class="user-info">
+      <img src=<%= user.image %> class = "icon_image">
+      <%= user.nickname %>
+    </div>
+  <% end %>
+</div>
