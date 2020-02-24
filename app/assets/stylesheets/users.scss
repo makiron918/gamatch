@@ -1,6 +1,13 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+a {
+  color: black;
+  opacity: 0.8;
+}
+a:hover {
+  background-color: darkgrey;
+}
 
 .contents_row {
   height: auto;
@@ -24,6 +31,14 @@
     //画像を丸くする
     object-fit: cover;
     //タテヨコ比を変えないままトリミング
+  }
+  .mypage {
+    height: 60px;
+    line-height: 60px;
+  }
+  .profile {
+    height: 60px;
+    line-height: 60px;
   }
 } 
 

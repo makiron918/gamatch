@@ -3,7 +3,7 @@
   <% @users.each do |user| %>
     <div class="user-info">
       <img src=<%= user.image %> class = "icon_image">
-      <%= user.nickname %>
+      <%= link_to user.nickname, about_user_path(user) %>
     </div>
   <% end %>
 </div>
