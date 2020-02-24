@@ -10,9 +10,11 @@
   .all-users {
     height: 60px;
     line-height: 60px;
+    padding-left: 10px;
     margin-bottom: 20px;
     font-weight: bold;
     background-color: lightgrey;
+    opacity: 0.7;
   }
   .icon_image {
     width: 200px;
@@ -26,5 +28,5 @@
 } 
 
 .user-info {
-  // float: left;
+  margin-left: 10px;
 }
