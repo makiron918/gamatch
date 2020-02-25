@@ -1,6 +1,9 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// 共通 
+
 a {
   color: black;
   opacity: 0.8;
@@ -9,11 +12,96 @@ a:hover {
   background-color: darkgrey;
 }
 
+.icon_image {
+  width: 200px;
+  height: 200px;
+  //サイズ指定
+  border-radius: 100px;
+  //画像を丸くする
+  object-fit: cover;
+  //タテヨコ比を変えないままトリミング
+}
+
 .contents_row {
   height: auto;
   width: 1170px;
   margin: 0 auto;
   padding-top: 60px;
+  background-color: #f7f7f7;
+}
+
+// index
+
+.all-users {
+  height: 60px;
+  line-height: 60px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  background-color: lightgrey;
+  opacity: 0.7;
+}
+.user-info {
+  margin-left: 10px;
+  padding-top: 24px;
+  display: flex;
+  .right-info {
+    padding-top: 16px;
+    padding-left: 16px;
+  }
+}
+
+// show
+
+.mypage {
+  height: 60px;
+  line-height: 60px;
+  padding-left: 16px;
+  background-color: thistle;
+}
+
+.my-info {
+  display: flex;
+  padding-top: 20px;
+  .right-info {
+    padding-left: 20px;
+    p {
+      padding-top: 10px;
+    }
+  }
+}
+
+.edit-btn {
+  border: 1px solid darkolivegreen;
+  border-radius: 4px;
+  background-color: limegreen;
+  color: #fff;
+  font-size: 14px;
+  display: inline-block;
+  height: 30px;
+  width: 70px;
+  text-align: center;
+  line-height: 30px;
+}
+.edit-btn:hover {
+  opacity: 0.7;
+}
+
+// about
+
+.profile {
+  height: 60px;
+  line-height: 60px;
+}
+
+// edit
+
+/* .contents_row {
+  height: auto;
+  width: 1170px;
+  margin: 0 auto;
+  padding-top: 60px;
+  background-color: #f7f7f7;
   .all-users {
     height: 60px;
     line-height: 60px;
@@ -35,6 +123,33 @@ a:hover {
   .mypage {
     height: 60px;
     line-height: 60px;
+    padding-left: 16px;
+    background-color: thistle;
+  }
+  .my-info {
+    display: flex;
+    padding-top: 20px;
+    .right-info {
+      padding-left: 20px;
+      p {
+        padding-top: 10px;
+      }
+    }
+  }
+  .edit-btn {
+    border: 1px solid darkolivegreen;
+    border-radius: 4px;
+    background-color: limegreen;
+    color: #fff;
+    font-size: 14px;
+    display: inline-block;
+    height: 30px;
+    width: 70px;
+    text-align: center;
+    line-height: 30px;
+  }
+  .edit-btn:hover {
+    opacity: 0.7;
   }
   .profile {
     height: 60px;
@@ -44,4 +159,10 @@ a:hover {
 
 .user-info {
   margin-left: 10px;
-}
+  padding-top: 24px;
+  display: flex;
+  .right-info {
+    padding-top: 16px;
+    padding-left: 16px;
+  }
+} */

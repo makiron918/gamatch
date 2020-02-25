@@ -10,6 +10,15 @@ class UsersController < ApplicationController
     @nickname = current_user.nickname
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    @user.update(user_params)
+  end
+
   def about
     @user = User.find(params[:id])
     @currentUserEntry=Entry.where(user_id: current_user.id)
@@ -34,6 +43,6 @@ class UsersController < ApplicationController
 
   private
     def user_params
-      params.require(:user).permit(:nickname, :image, :email)
+      params.require(:user).permit(:nickname, :image, :email, :age, :sex, :intro)
     end
 end
