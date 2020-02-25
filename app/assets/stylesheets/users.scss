@@ -2,14 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// 共通 
+/* 共通 */
 
 a {
   color: black;
   opacity: 0.8;
-}
-a:hover {
-  background-color: darkgrey;
 }
 
 .icon_image {
@@ -26,16 +23,15 @@ a:hover {
   height: auto;
   width: 1170px;
   margin: 0 auto;
-  padding-top: 60px;
+  padding: 60px 16px 16px 16px;
   background-color: #f7f7f7;
 }
 
-// index
+/* index(ユーザー一覧) */
 
 .all-users {
   height: 60px;
   line-height: 60px;
-  padding-left: 10px;
   margin-bottom: 20px;
   font-weight: bold;
   background-color: lightgrey;
@@ -48,16 +44,20 @@ a:hover {
   .right-info {
     padding-top: 16px;
     padding-left: 16px;
+    a:hover {
+      opacity: 0.5;
+    }
   }
 }
 
-// show
+/* show(マイページ) */
 
 .mypage {
   height: 60px;
   line-height: 60px;
   padding-left: 16px;
   background-color: thistle;
+  font-weight: bold;
 }
 
 .my-info {
@@ -70,99 +70,67 @@ a:hover {
     }
   }
 }
-
-.edit-btn {
-  border: 1px solid darkolivegreen;
-  border-radius: 4px;
-  background-color: limegreen;
-  color: #fff;
-  font-size: 14px;
-  display: inline-block;
-  height: 30px;
-  width: 70px;
-  text-align: center;
-  line-height: 30px;
+.btn {
+  width: 200px;
+  margin: 0 auto;
+  padding-top: 40px;
+  .edit-btn {
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border-radius: 4px;
+    color: #ffffff;
+    background-image: linear-gradient(#6795fd 0%, #67ceff 100%);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    border-bottom: solid 3px #5e7fca;
+  }
+  .edit-btn:active {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+    border-bottom: none;
+  }
 }
-.edit-btn:hover {
-  opacity: 0.7;
-}
 
-// about
+/* about(ユーザープロフィール) */
 
 .profile {
   height: 60px;
   line-height: 60px;
 }
-
-// edit
-
-/* .contents_row {
-  height: auto;
-  width: 1170px;
+.btns{
   margin: 0 auto;
-  padding-top: 60px;
-  background-color: #f7f7f7;
-  .all-users {
-    height: 60px;
-    line-height: 60px;
-    padding-left: 10px;
-    margin-bottom: 20px;
-    font-weight: bold;
-    background-color: lightgrey;
-    opacity: 0.7;
-  }
-  .icon_image {
-    width: 200px;
-    height: 200px;
-    //サイズ指定
-    border-radius: 100px;
-    //画像を丸くする
-    object-fit: cover;
-    //タテヨコ比を変えないままトリミング
-  }
-  .mypage {
-    height: 60px;
-    line-height: 60px;
-    padding-left: 16px;
-    background-color: thistle;
-  }
-  .my-info {
-    display: flex;
-    padding-top: 20px;
-    .right-info {
-      padding-left: 20px;
-      p {
-        padding-top: 10px;
-      }
-    }
-  }
-  .edit-btn {
-    border: 1px solid darkolivegreen;
-    border-radius: 4px;
-    background-color: limegreen;
-    color: #fff;
-    font-size: 14px;
+  width: 400px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  .chat-entry {
     display: inline-block;
-    height: 30px;
-    width: 70px;
-    text-align: center;
-    line-height: 30px;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #67c5ff;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+    transition: .4s;
   }
-  .edit-btn:hover {
-    opacity: 0.7;
+  .chat-entry:hover {
+    background: #67c5ff;
+    color: white;
   }
-  .profile {
-    height: 60px;
-    line-height: 60px;
+  .index-btn {
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: white;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+    transition: .4s;
+    background: #67c5ff;
+    margin-left: 15px;
   }
-} 
+  .index-btn:hover {
+    color: #67c5ff;
+    background: white;
+  }
+}
 
-.user-info {
-  margin-left: 10px;
-  padding-top: 24px;
-  display: flex;
-  .right-info {
-    padding-top: 16px;
-    padding-left: 16px;
-  }
-} */
+/* edit(ユーザー情報の編集) */

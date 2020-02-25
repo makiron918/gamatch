@@ -1,11 +1,12 @@
 <div class="contents_row">
   <p class="profile"><%= @user.nickname %>さんのプロフィール</p>
-    <img src=<%= @user.image.url %> class = "icon_image">
+  <img src=<%= @user.image.url %> class = "icon_image">
+  <div class="btns">
     <% if @user.id == current_user.id %>
 
     <% else %>
       <% if @isRoom == true %>
-        <p><a href="/rooms/<%= @roomId %>">チャットへ</a>
+        <p><a href="/rooms/<%= @roomId %>" class="chat-entry">チャットへ</a>
       <% else %>
         <%= form_for @room do |f| %>
           <%= fields_for @entry do |e| %>
@@ -16,5 +17,6 @@
       <% end %>
     <% end %>
 
-  <%= link_to "ユーザー 一覧に戻る", users_path, class: "index-btn" %>
+    <%= link_to "ユーザー 一覧に戻る", users_path, class: "index-btn" %>
+  </div>
 </div>
