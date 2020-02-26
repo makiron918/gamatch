@@ -12,4 +12,12 @@ class User < ApplicationRecord
   
   has_many :messages, dependent: :destroy
   has_many :entries, dependent: :destroy
+
+  def self.search(search)
+    if search
+      User.where('nickname LIKE(?)', "%#{search}%")
+    else
+      User.all
+    end
+  end
 end

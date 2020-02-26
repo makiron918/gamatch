@@ -1,4 +1,5 @@
 <div class="contents_row">
+
   <div class="container">
     <h2>Sign up</h2>
     <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
@@ -35,6 +36,8 @@
       <div class="actions">
         <%= f.submit "Sign up" %>
       </div>
+      
     <% end %>
   </div>
+
 </div>

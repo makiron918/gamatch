@@ -1,6 +1,98 @@
 // Place all the styles related to the rooms controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-h1 {
-  margin-top: 60px;
+
+.contents_row {
+  height: auto;
+  width: 1170px;
+  margin: 0 auto;
+  padding: 60px 16px 16px 16px;
+  background-color: #f7f7f7;
+}
+
+.chat-title {
+  padding: 0.25em 0.5em;/*上下 左右の余白*/
+  color: #494949;/*文字色*/
+  background: transparent;/*背景透明に*/
+  border-left: solid 5px #7db4e6;/*左線*/
+  margin-bottom: 10px;
+}
+
+.chat-members {
+  h4 {
+    margin-bottom: 10px;
+    color: #364e96;/*文字色*/
+    padding: 0.5em 0;/*上下の余白*/
+    border-top: solid 3px #364e96;/*上線*/
+    border-bottom: solid 3px #364e96;/*下線*/
+    width: 80px;
+    text-align: center;
+  }
+  a {
+    padding-right: 10px;
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+  }
+  a:hover {
+    letter-spacing: 5px;
+  }
+}
+
+.message {
+  .message-text {
+    position: relative;
+    padding: 0.6em;
+    background: #e0edff;
+    width: auto;
+    margin-bottom: 10px;
+  }
+  .message-text:after {
+    position: absolute;
+    content: '';
+    top: 100%;
+    left: 20px;
+    border: 15px solid transparent;
+    border-top: 15px solid #e0edff;
+    width: 0;
+    height: 0;
+  }
+}
+
+.send-btn {
+  margin: 10px 0;
+  position: relative;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #FFF;
+  background: #fd9535;/*背景色*/
+  border-bottom: solid 2px #d27d00;/*少し濃い目の色に*/
+  border-radius: 4px;/*角の丸み*/
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+  font-weight: bold;
+}
+.send-btn:hover {
+  cursor: pointer;
+}
+.send-btn:active {
+  border-bottom: solid 2px #fd9535;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+}
+
+.index-btn {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  border-left: solid 4px #668ad8;
+  border-right: solid 4px #668ad8;
+  color: #668ad8;
+  background: #e1f3ff;
+  transition: .4s;
+}
+.index-btn:hover {
+  background: #668ad8;
+  color: #FFF;
 }

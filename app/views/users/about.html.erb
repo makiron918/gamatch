@@ -1,6 +1,12 @@
 <div class="contents_row">
+
   <p class="profile"><%= @user.nickname %>さんのプロフィール</p>
   <img src=<%= @user.image.url %> class = "icon_image">
+
+  <div class="text-box">
+    <p><%= simple_format(@user.intro) %></p>
+  </div>
+  
   <div class="btns">
     <% if @user.id == current_user.id %>
 
@@ -12,11 +18,12 @@
           <%= fields_for @entry do |e| %>
             <%= e.hidden_field :user_id, :value=> @user.id %>
           <% end %>
-          <%= f.submit "チャットを始める" %>
+          <%= f.submit "チャットを始める", class: "chat-start" %>
         <% end %>
       <% end %>
     <% end %>
 
     <%= link_to "ユーザー 一覧に戻る", users_path, class: "index-btn" %>
   </div>
+
 </div>

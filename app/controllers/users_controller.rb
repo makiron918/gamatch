@@ -10,13 +10,21 @@ class UsersController < ApplicationController
     @nickname = current_user.nickname
   end
 
+  def search
+    @users = User.search(params[:keyword])
+  end
+
   def edit
     @user = User.find(params[:id])
   end
 
   def update
-    @user = User.find(params[:id])
-    @user.update(user_params)
+    user = User.find(params[:id])
+    if user.update(user_params)
+      redirect_to user_path
+    else
+      render :edit
+    end
   end
 
   def about
@@ -43,6 +51,6 @@ class UsersController < ApplicationController
 
   private
     def user_params
-      params.require(:user).permit(:nickname, :image, :email, :age, :sex, :intro)
+      params.require(:user).permit(:nickname, :image, :email, :age, :sex, :intro, :voice)
     end
 end

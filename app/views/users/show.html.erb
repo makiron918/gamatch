@@ -1,9 +1,13 @@
 <div class="contents_row">
+
   <p class="mypage"><%= @nickname %>さんのマイページ</p>
+
   <div class="my-info">
+
     <div class="left-info">
     <img src=<%= @user.image.url %> class = "icon_image">
     </div>
+
     <div class="right-info">
       <% if @user.age.present? %>
       <p><%= @user.age %>代
@@ -11,11 +15,16 @@
       <% if @user.age.present? %>
       <%= @user.sex %></p>
       <% end %>
-      <p>自己紹介</p>
-      <p><%= @user.intro %></p>
+
+      <div class="intro-box">
+        <div class="box-title">自己紹介</div>
+        <p><%= simple_format(@user.intro) %></p>
+      </div>
     </div>
   </div>
+
   <div class="btn">
     <%= link_to "編集する", edit_user_path(@user), class: "edit-btn" %>
   </div>
+
 </div>

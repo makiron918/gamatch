@@ -1,7 +1,9 @@
 <div class="contents_row">
+
   <div class="container">
     <h2>プロフィール編集</h2>
     <%= form_with model: @user do |f| %>
+
       <div class="form-group">
       <%= f.label :nickname, 'ニックネーム' %><br>
       <%= f.text_field :nickname, autofocus: true, maxlength: "10", class: 'form-control' %>
@@ -27,6 +29,11 @@
           <%= f.label :sex, '性別', class:'control-label' %>
           <%= f.select :sex, [["",""], ["女性","女性"], ["男性","男性"]], {},   class: 'form-control' %>
       </div>
+
+      <div class="col-xs-6 form-group">
+          <%= f.label :voice, 'ボイスチャット', class:'control-label' %>
+          <%= f.select :voice, [["",""], ["あり","あり"], ["なし","なし"]], {},   class: 'form-control' %>
+      </div>
       </div>
 
       <div class="form-group">
@@ -37,6 +44,8 @@
       <div class="al-c">
       <%= f.submit 'プロフィール編集を完了する', class: 'btn btn-primary' %>
       </div>
+      
     <% end %>
   </div>
+
 </div>
