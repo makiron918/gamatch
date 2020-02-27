@@ -2,7 +2,7 @@
 <div class="contents_row">
 
   <%= form_with(url: search_users_path, local: true, method: :get, class: "search-form") do |form| %>
-    <%= form.text_field :keyword, placeholder: "ユーザーを検索する", class: "search-input" %>
+    <%= form.text_field :keyword, placeholder: "ユーザー検索：ゲーム名やハードを入力", class: "search-input" %>
     <%= form.submit "検索", class: "search-btn" %>
   <% end %>
 
@@ -12,6 +12,12 @@
 
       <div class="right-info">
         <%= link_to user.nickname, about_user_path(user) %>
+        <p class="voice">ボイスチャット: <%= user.voice %></p>
+        <% user.games.each do |game| %>
+          <div class="game-name">
+            <%= simple_format(game.name) %>
+          </div>
+        <% end %>
       </div>
     </div>
   <% end %>

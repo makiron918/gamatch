@@ -30,8 +30,29 @@ a {
 /* index(ユーザー一覧) */
 
 .search-form {
-  display: inline-block;
+  text-align: center;
   margin: 10px 0;
+  .search-input {
+    width: 30%;
+    margin-right: 10px;
+    height: 50px;
+  }
+
+  .search-btn {
+    width: 10%;
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #668ad8;
+    color: #FFF;
+    border-radius: 4px;
+    box-shadow: 0px 0px 0px 5px #668ad8;
+    border: dashed 1px #FFF;
+  }
+  .search-btn:hover {
+    border: dotted 1px #FFF;
+    cursor: pointer;
+  }
 }
 
 .all-users {
@@ -58,6 +79,14 @@ a {
     }
     a:hover {
       opacity: 0.5;
+    }
+    .voice {
+      padding-left: 8px;
+      margin-top: 8px;
+    }
+    .game-name {
+      margin-top: 8px;
+      padding-left: 8px;
     }
   }
 }
@@ -146,17 +175,33 @@ a {
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
 } 
 
-.text-box {
-  padding: 0.5em 1em;
-  margin: 2em 0;
-  font-weight: bold;
-  color: #6091d3;/*文字色*/
-  background: #FFF;
-  border: solid 3px #6091d3;/*線*/
-  border-radius: 10px;/*角の丸み*/
-  p {
-    margin: 0; 
-    padding: 0;
+.user-content {
+  display: flex;
+  padding-top: 20px;
+  .right-info {
+    padding-left: 30px;
+    .game-top {
+      border-bottom: double 5px #FFC778;
+      width: 180px;
+      font-size: 18px;
+    }
+    .game-name {
+      margin-top: 8px;
+      padding-left: 8px;
+    }
+    .text-box {
+      padding: 0.5em 1em;
+      margin: 2em 0;
+      font-weight: bold;
+      color: #6091d3;/*文字色*/
+      background: #FFF;
+      border: solid 3px #6091d3;/*線*/
+      border-radius: 10px;/*角の丸み*/
+      p {
+        margin: 0;
+        padding: 0;
+      }
+    }
   }
 }
 
@@ -210,3 +255,65 @@ a {
 }
 
 /* edit(ユーザー情報の編集) */
+
+.edit-title {
+  padding: 0.5em;
+  background: aliceblue;
+  width: 180px;
+  text-align: center;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.23);
+}
+.detail {
+  margin-left: 8px;
+  .form-group {
+    margin-top: 8px;
+  }
+  .btn-primary {
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #f7f7f7;
+    border-left: solid 6px #ff7c5c;/*左線*/
+    color: #ff7c5c;/*文字色*/
+    font-weight: bold;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    cursor: pointer;
+  }
+  .btn-primary:active {
+    box-shadow: inset 0 0 2px rgba(128, 128, 128, 0.1);
+    transform: translateY(2px);
+  }
+}
+
+/* update */
+
+.update-text {
+  width: 160px;
+  margin: 0 500px;
+  padding: 20px 0;
+  font-weight: bold;
+}
+.mypage-btn {
+  position: relative;
+  display: block;
+  font-weight: bold;
+  padding: 0.25em 0;
+  color: #67c5ff;
+  width: 130px;
+  margin: 0 auto;
+}
+.mypage-btn:before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 4px;
+  top:100%;
+  left: 0;
+  border-radius: 3px;
+  background:#67c5ff;
+  transition: .2s;
+}
+.mypage-btn:hover:before {
+  top: -webkit-calc(100% - 3px);
+  top: calc(100% - 3px);
+}

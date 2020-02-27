@@ -1,12 +1,27 @@
 <div class="contents_row">
 
   <p class="profile"><%= @user.nickname %>さんのプロフィール</p>
-  <img src=<%= @user.image.url %> class = "icon_image">
 
-  <div class="text-box">
-    <p><%= simple_format(@user.intro) %></p>
+  <div class="user-content">
+
+    <div class="left-info">
+      <img src=<%= @user.image.url %> class = "icon_image">
+    </div>
+
+    <div class="right-info">
+      <p class="game-top">よくプレイするゲーム</p>
+      <% @user.games.each do |game| %>
+        <div class="game-name">
+          <%= simple_format(game.name) %>
+        </div>
+      <% end %>
+      <div class="text-box">
+        <p><%= simple_format(@user.intro) %></p>
+      </div>
+    </div>
+
   </div>
-  
+
   <div class="btns">
     <% if @user.id == current_user.id %>
 
