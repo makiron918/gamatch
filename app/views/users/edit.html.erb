@@ -8,7 +8,7 @@
 
         <div class="form-group">
         <%= f.label :nickname, 'ニックネーム' %><br>
-        <%= f.text_field :nickname, autofocus: true, maxlength: "10", class: 'form-control' %>
+        <%= f.text_field :nickname, autofocus: true, maxlength: "10", size: "20x28", class: 'form-control' %>
         </div>
 
         <div class="form-group">
@@ -24,7 +24,7 @@
         <%= f.fields_for :games do |game| %>
           <div class="form-group">
             <%= game.label :name, 'ゲームタイトル' %><br>
-            <%= game.text_field :name %>
+            <%= game.text_field :name, class: 'form-control' %>
           </div>
 
           <div class="form-group">
