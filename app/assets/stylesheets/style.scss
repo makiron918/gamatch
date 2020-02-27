@@ -256,6 +256,87 @@ header {
   }
 }
 
+/* メッセージラッパー */
+
+.message-wrapper {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 80px;
+  margin-top: 10px;
+  text-align: center;
+  .heading {
+    margin-bottom: 24px;
+    h2 {
+      font-size: 22px;
+      margin-bottom: 4px;
+    }
+  }
+  .message {
+    background-color: #5dca88;
+    padding: 15px 40px;
+    cursor: pointer;
+    box-shadow: 0 7px #1a7940;
+    a {
+      color: white;
+    }
+  }
+  .message:active {
+    box-shadow: none;
+    position: relative;
+    top: 7px;
+  }
+}
+
+/* FAQ */
+
+.faq {
+  background: #5396db;
+  .container {
+    padding: 0 0 60px;
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+    .content-title {
+      padding: 50px 0 0;
+      font-size: 40px;
+      font-weight: bold;
+      line-height: 1.1;
+      text-align: center;
+    }
+    .content-title-sub {
+      margin: 10px 0 0;
+      font-size: 14px;
+      line-height: 1.5;
+      text-align: center;
+    }
+    .faq__dropdown-container {
+      width: 800px;
+      margin: 36px auto 0;
+    .faq__dropdown-menu {
+      margin: 0 0 8px;
+      background: #fff;
+      .faq__dropdown-arrow-down {
+        border-width: 8px 4px 0 4px;
+        border-color: #5396db transparent transparent transparent;
+        .faq__title {
+          padding-left: 8px;
+          font-size: 16px;
+          font-weight: bold;
+          line-height: 1.5;
+          color: #003f6f;
+        }
+      }
+      .faq__dropdown-arrow-down:after {
+        border-width: 8px 4px 0 4px;
+        border-color: #5396db transparent transparent transparent;
+      }
+      .faq__dropdown-content {
+        padding: 0 34px 20px;
+      }
+    }
+    }
+  }
+}
+
 /* フッター */
 
 footer {
