@@ -225,33 +225,38 @@ header {
     }
   }
   .genre {
+    margin: 0 auto;
+    width: 900px;
+    height: 300px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
     .game {
+      height: 300px;
       float: left;
-      width: 25%;
-      .game-icon1 {
-        background-image: url(MHW.jpg);
-        height: 200px;
-        background-size: cover;
-        background-repeat:  no-repeat;
+      display: inline;
+      overflow: hidden;
+      display: inline-block;
+      overflow: hidden;
+      li {
+        width: 350px;
+        height: 300px;
+        float: left;
+        display: inline;
+        overflow: hidden;
+        img {
+          object-fit: cover;
+          width: 350px;
+          height: 300px;
+        }
       }
-      .game-icon2 {
-        background-image: url(4733.jpg);
-        height: 200px;
-        background-size: cover;
-        background-repeat:  no-repeat;
-      }
-      .game-icon3 {
-        background-image: url(1_3qfvh3oerw01p4o77f0t4.jpg);
-        height: 200px;
-        background-size: cover;
-        background-repeat:  no-repeat;
-      }
-      .game-icon4 {
-        background-image: url(top.jpg);
-        height: 200px;
-        background-size: cover;
-        background-repeat:  no-repeat;
-      }
+    }
+    .game:after {
+      content: ".";
+      height: 0;
+      clear: both;
+      display: block;
+      visibility: hidden;
     }
   }
 }
@@ -260,8 +265,8 @@ header {
 
 .message-wrapper {
   border-bottom: 1px solid #eee;
-  padding-bottom: 80px;
-  margin-top: 10px;
+  padding-bottom: 60px;
+  margin-top: 20px;
   text-align: center;
   .heading {
     margin-bottom: 24px;
@@ -275,6 +280,7 @@ header {
     padding: 15px 40px;
     cursor: pointer;
     box-shadow: 0 7px #1a7940;
+    border-radius: 3px;
     a {
       color: white;
     }
@@ -300,6 +306,7 @@ header {
       font-size: 40px;
       font-weight: bold;
       line-height: 1.1;
+      color: white;
       text-align: center;
     }
     .content-title-sub {
@@ -307,6 +314,7 @@ header {
       font-size: 14px;
       line-height: 1.5;
       text-align: center;
+      color: white;
     }
     .faq__dropdown-container {
       width: 800px;
@@ -317,6 +325,15 @@ header {
       .faq__dropdown-arrow-down {
         border-width: 8px 4px 0 4px;
         border-color: #5396db transparent transparent transparent;
+        position:relative;
+        cursor: pointer;
+        span {
+          position:absolute;
+          top:0;
+          right:5px;
+          color:#003f6f;
+          font-size:13px;
+        }
         .faq__title {
           padding-left: 8px;
           font-size: 16px;
@@ -329,12 +346,35 @@ header {
         border-width: 8px 4px 0 4px;
         border-color: #5396db transparent transparent transparent;
       }
-      .faq__dropdown-content {
-        padding: 0 34px 20px;
+      .answer {
+        padding: 0 34px 10px;
+        p {
+          font-size: 12px;;
+        }
       }
     }
     }
   }
+}
+
+/* トップページへボタン */
+
+.top-btn {
+  margin:10px auto;
+  width: 160px;
+  text-align: center;
+  padding: 0.5em 1em;
+  background: #668ad8;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.top-btn:active {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+  border-bottom: none;
 }
 
 /* フッター */
@@ -347,5 +387,39 @@ footer {
       font-size: 12px;
       text-align: center;
     }
+  }
+}
+
+/* ページネーション */
+
+.page {
+  background-color: #7db4e6;
+  color: white;
+  text-align: center;
+  margin-right: 2px;
+  display: inline-block;
+  width: 16px;
+  a {
+    color: white;
+  }
+}
+.next {
+  background-color: #7db4e6;
+  text-align: center;
+  margin-right: 2px;
+  display: inline-block;
+  width: 60px;
+  a {
+    color: white;
+  }
+}
+
+.last {
+  background-color: #7db4e6;
+  text-align: center;
+  display: inline-block;
+  width: 60px;
+  a {
+    color: white;
   }
 }
