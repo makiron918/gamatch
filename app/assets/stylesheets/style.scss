@@ -353,6 +353,9 @@ header {
 
 .faq {
   background: #5396db;
+  opacity: 0;
+  transform : translate(0, 50px);
+  transition : all 1500ms;
   .container {
     padding: 0 0 60px;
     position: relative;
@@ -412,6 +415,10 @@ header {
     }
     }
   }
+}
+.faq.scrollin {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 
 /* トップページへボタン */
