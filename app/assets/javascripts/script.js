@@ -12,6 +12,7 @@ $(function() {
     }
   })
 
+
   $('.genre').each(function(){
     var genreWidth = $(this).width();
     var genreHeight = $(this).height();
@@ -47,10 +48,48 @@ $(function() {
     $('#genre_wrap ul').clone().appendTo('#genre_wrap');
   });
 
+
   $('.top-btn').click(function () {
     $('body,html').animate({
       scrollTop: 0
     }, 800);
     return false;
+  });
+
+
+  $('.menu').on('click',function(){
+    $('.sidebar').css(
+      'display','block'
+    ).animate({
+      left:'0'
+    }, 
+      300
+    );
+    $('.sidebar-bg').css(
+      'display','block'
+    ).animate({
+      opacity:'0.5'
+    },
+      300
+    )
+  });
+  /*close*/
+  $('.sidebar__icon').on('click',function(){
+    $('.sidebar').animate({
+      left:'-200px'
+    },
+      300
+    );
+    $('.sidebar-bg').animate({
+      opacity:'0'
+    },
+      300
+    );
+    setTimeout(function(){
+      $('.sidebar').css('display','none');
+      $('.sidebar-bg').css('display','none');
+    },
+      300
+    );
   });
 });

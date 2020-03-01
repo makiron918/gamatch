@@ -9,6 +9,7 @@ class User < ApplicationRecord
   validates :email, presence: true, length: { maximum: 255 },
                     format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i },
                     uniqueness: { case_sensitive: false }
+  validates_associated :games
   
   has_many :messages, dependent: :destroy
   has_many :entries, dependent: :destroy
