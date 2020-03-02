@@ -323,7 +323,7 @@ header {
 .message-wrapper {
   border-bottom: 1px solid #eee;
   padding-bottom: 60px;
-  margin-top: 20px;
+  margin-top: 60px;
   text-align: center;
   .heading {
     margin-bottom: 24px;
@@ -421,10 +421,90 @@ header {
   transform: translate(0, 0);
 }
 
+/* お問い合わせフォーム */
+.contact {
+  padding: 20px 0 50px;
+  border-bottom: 1px solid #eee;
+  .contact-container {
+    width: 1000px;
+    margin: 0 auto;
+    .contact-title {
+      padding: 50px 0 0;
+      font-size: 40px;
+      font-weight: bold;
+      line-height: 1.1;
+      text-align: center;
+    }
+    p {
+      margin: 10px 0 0;
+      font-size: 14px;
+      line-height: 1.5;
+      text-align: center;
+    }
+    .form-container {
+      width: 700px;
+      margin: 46px auto 0;
+      .form-group {
+        margin: 0 0 20px;
+        dl {
+          display: flex;
+          align-items: center;
+          dt {
+            width: 180px;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 1.5;
+          }
+          dd {
+            flex: 1;
+            display: block;
+            margin-inline-start: 40px;
+            input {
+              width: 520px;
+              padding: 14px;
+              font-size: 14px;
+              border: 1px solid #d9d9d9;
+              box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+            }
+            textarea {
+              width: 520px;
+              height: 200px;
+              margin: 16px 0 0;
+              padding: 14px;
+              font-size: 14px;
+              border: 1px solid #d9d9d9;
+              box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+              resize: none;
+            }
+          }
+        }
+      }
+      .form-group.submit {
+        margin: 40px 0 0;
+        text-align: center;
+        .form-btn {
+          width: 240px;
+          height: 60px;
+          background: #5396db;
+          font-size: 16px;
+          font-weight: bold;
+          color: #fff;
+          border: none;
+          border-radius: 4px;
+          box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.1);
+          cursor: pointer;
+          -webkit-appearance: none;
+        }
+      }
+    }
+  }
+}
+
+
 /* トップページへボタン */
 
 .top-btn {
-  margin:10px auto;
+  margin:20px auto;
   width: 160px;
   text-align: center;
   padding: 0.5em 1em;

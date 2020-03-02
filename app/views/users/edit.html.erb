@@ -51,8 +51,11 @@
         </div>
 
         <div class="form-group">
-        <%= f.label :intro, '自己紹介（255文字未満）' %><br>
-        <%= f.text_area :intro, :maxlength => "255", :size => "80x5",  class: 'form-control'  %>
+          <%= f.label :intro, '自己紹介（255文字未満）' %><br>
+          <%= f.text_area :intro, :maxlength => "255", :size => "80x5",  class: 'form-text'  %>
+          <div class="char_num">
+            <%= @user.intro.length %><span>文字</span>
+          </div>
         </div>
 
         <div class="al-c">

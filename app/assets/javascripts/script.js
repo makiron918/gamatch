@@ -61,6 +61,11 @@ $(function() {
     });
 
 
+    $(".form-text").on('keyup', function(){
+      $(".char_num").text($(this).val().length + '文字');
+    });
+
+
   $('.top-btn').click(function () {
     $('body,html').animate({
       scrollTop: 0
