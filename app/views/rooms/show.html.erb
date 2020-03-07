@@ -13,7 +13,8 @@
     <% @messages.each do |message| %>
     <div class="message">
       <div class="message-text">
-        <strong><%= simple_format(message.content) %></strong>
+        <p><%= simple_format(message.content) %></p>
+        <p class="message__time"><%= message.created_at.strftime("%Y年%m月%d日 %H時%M分")%></p>
       </div>
       <small>by <a href="/users/<%= message.user_id %>"><%= message.user.nickname %> さん</a></small>
     </div>
@@ -24,8 +25,8 @@
   <% end %>
 
   <%= form_for @message do |f| %>
-    <%= f.text_field :content, :placeholder => "メッセージを入力して下さい" , :size => 70 %>
-    <%= f.hidden_field :room_id, :value => @room.id %>
+    <%= f.text_field :content, placeholder: "メッセージを入力して下さい" , size: 80 %>
+    <%= f.hidden_field :room_id, value: @room.id %>
     <br>
     <%= f.submit "投稿する", class: "send-btn" %>
   <% end %>

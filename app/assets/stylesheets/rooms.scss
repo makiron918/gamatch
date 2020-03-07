@@ -46,6 +46,13 @@
     background: #e0edff;
     width: auto;
     margin-bottom: 10px;
+    display: flex;
+    .message__time {
+      margin-left: 10px;
+      font-size: 10px;
+      color: #999999;
+      line-height: 20px;
+    }
   }
   .message-text:after {
     position: absolute;
