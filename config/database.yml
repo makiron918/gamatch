@@ -49,6 +49,9 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: gamatch_production
   username: gamatch
   password: <%= ENV['GAMATCH_DATABASE_PASSWORD'] %>
