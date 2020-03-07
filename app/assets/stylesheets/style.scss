@@ -305,6 +305,9 @@ header {
           width: 350px;
           height: 300px;
         }
+        img:hover {
+          opacity: 0.7;
+        }
       }
     }
     .game:after {
