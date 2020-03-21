@@ -1,0 +1,715 @@
+@charset "UTF-8";
+/* リセットCSS */
+html {
+  color: #000;
+  background: #FFF;
+}
+
+/*
+  TODO remove settings on BODY since we can't namespace it.
+*/
+/*
+  TODO test putting a class on HEAD.
+      - Fails on FF.
+*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+/*
+  TODO think about hanlding inheritence differently, maybe letting IE6 fail a bit...
+*/
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+q:before,
+q:after {
+  content: '';
+}
+
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+/* to preserve line-height and selector appearance */
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*to enable resizing for IE*/
+input,
+textarea,
+select {
+  *font-size: 100%;
+}
+
+/*because legend doesn't inherit in IE */
+legend {
+  color: #000;
+}
+
+/* YUI CSS Detection Stamp */
+#yui3-css-stamp.cssreset {
+  display: none;
+}
+
+/* リセットCSSここまで */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ヘッダー */
+header {
+  height: 60px;
+  width: 100%;
+  background-color: rgba(34, 49, 52, 0.9);
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+header .container {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+header .container .header-left {
+  float: left;
+  width: 120px;
+  line-height: 60px;
+  font-size: 20px;
+}
+
+header .container .header-left a {
+  color: white;
+}
+
+header .container .menu {
+  display: none;
+  cursor: pointer;
+  float: right;
+  font-size: 25px;
+  line-height: 60px;
+  color: white;
+}
+
+header .container .sidebar {
+  padding: 16px;
+  width: 220px;
+  height: 100vh;
+  position: fixed;
+  background-color: #fff;
+  top: 0;
+  left: -220px;
+  z-index: 4;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: none;
+}
+
+header .container .sidebar .sidebar__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .container .sidebar .sidebar__inner .sidebar__icon {
+  font-size: 28px;
+  color: #654;
+  cursor: pointer;
+}
+
+header .container .sidebar .sidebar__txt {
+  font-size: 18px;
+  margin-top: 16px;
+  margin-left: 8px;
+  display: block;
+  font-weight: bold;
+}
+
+header .container .sidebar .sidebar__txt:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+header .container .sidebar-bg {
+  background-color: #558;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: none;
+}
+
+header .container .header-right {
+  float: right;
+}
+
+header .container .header-right a {
+  color: white;
+  line-height: 60px;
+  margin-left: 15px;
+}
+
+header .container .header-right a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* トップラッパー */
+.top-wrapper {
+  padding: 180px 0 100px;
+  background-image: url(pixta_41059861_M.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.top-wrapper .container {
+  width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.top-wrapper .container h1 {
+  opacity: 0.7;
+  font-size: 45px;
+  letter-spacing: 5px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.top-wrapper .container p {
+  opacity: 0.7;
+  text-shadow: 1px 1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff, -1px -1px 0 #fff;
+}
+
+.top-wrapper .container .btn-wrapper {
+  margin: 20px 0;
+}
+
+.top-wrapper .container .btn-wrapper .index {
+  background-color: cadetblue;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 4px;
+}
+
+.top-wrapper .container .btn-wrapper .index:hover {
+  opacity: 0.7;
+}
+
+.top-wrapper .container .btn-wrapper .user {
+  background-color: darkorange;
+  color: white;
+  padding: 8px 20px;
+  margin-left: 15px;
+  border-radius: 4px;
+}
+
+.top-wrapper .container .btn-wrapper .user:hover {
+  opacity: 0.7;
+}
+
+/* ジャンルラッパー */
+.genre-wrapper {
+  height: 500px;
+  padding-bottom: 80px;
+  background-color: #f7f7f7;
+}
+
+.genre-wrapper .heading {
+  padding: 60px 0 30px;
+  color: #5f5d60;
+}
+
+.genre-wrapper .heading h2 {
+  font-weight: normal;
+}
+
+.genre-wrapper .genre {
+  margin: 0 auto;
+  width: 900px;
+  height: 300px;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.genre-wrapper .genre .game {
+  height: 300px;
+  float: left;
+  display: inline;
+  overflow: hidden;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.genre-wrapper .genre .game li {
+  width: 350px;
+  height: 300px;
+  float: left;
+  display: inline;
+  overflow: hidden;
+}
+
+.genre-wrapper .genre .game li img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 350px;
+  height: 300px;
+}
+
+.genre-wrapper .genre .game li img:hover {
+  opacity: 0.7;
+}
+
+.genre-wrapper .genre .game:after {
+  content: ".";
+  height: 0;
+  clear: both;
+  display: block;
+  visibility: hidden;
+}
+
+/* メッセージラッパー */
+.message-wrapper {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 60px;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.message-wrapper .heading {
+  margin-bottom: 24px;
+}
+
+.message-wrapper .heading h2 {
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+.message-wrapper .message {
+  background-color: #5dca88;
+  padding: 15px 40px;
+  cursor: pointer;
+  -webkit-box-shadow: 0 7px #1a7940;
+          box-shadow: 0 7px #1a7940;
+  border-radius: 3px;
+}
+
+.message-wrapper .message a {
+  color: white;
+}
+
+.message-wrapper .message:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  position: relative;
+  top: 7px;
+}
+
+/* FAQ */
+.faq {
+  background: #5396db;
+  opacity: 0;
+  -webkit-transform: translate(0, 50px);
+          transform: translate(0, 50px);
+  -webkit-transition: all 1500ms;
+  transition: all 1500ms;
+}
+
+.faq .container {
+  padding: 0 0 60px;
+  position: relative;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.faq .container .content-title {
+  padding: 50px 0 0;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1.1;
+  color: white;
+  text-align: center;
+}
+
+.faq .container .content-title-sub {
+  margin: 10px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  color: white;
+}
+
+.faq .container .faq__dropdown-container {
+  width: 800px;
+  margin: 36px auto 0;
+}
+
+.faq .container .faq__dropdown-container .faq__dropdown-menu {
+  margin: 0 0 8px;
+  background: #fff;
+}
+
+.faq .container .faq__dropdown-container .faq__dropdown-menu .faq__dropdown-arrow-down {
+  border-width: 8px 4px 0 4px;
+  border-color: #5396db transparent transparent transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+.faq .container .faq__dropdown-container .faq__dropdown-menu .faq__dropdown-arrow-down span {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  color: #003f6f;
+  font-size: 13px;
+}
+
+.faq .container .faq__dropdown-container .faq__dropdown-menu .faq__dropdown-arrow-down .faq__title {
+  padding-left: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #003f6f;
+}
+
+.faq .container .faq__dropdown-container .faq__dropdown-menu .faq__dropdown-arrow-down:after {
+  border-width: 8px 4px 0 4px;
+  border-color: #5396db transparent transparent transparent;
+}
+
+.faq .container .faq__dropdown-container .faq__dropdown-menu .answer {
+  padding: 0 34px 10px;
+}
+
+.faq .container .faq__dropdown-container .faq__dropdown-menu .answer p {
+  font-size: 12px;
+}
+
+.faq.scrollin {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+/* お問い合わせフォーム */
+.contact {
+  padding: 20px 0 50px;
+  border-bottom: 1px solid #eee;
+}
+
+.contact .contact-container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.contact .contact-container .contact-title {
+  padding: 50px 0 0;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.contact .contact-container p {
+  margin: 10px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.contact .contact-container .form-container {
+  width: 700px;
+  margin: 46px auto 0;
+}
+
+.contact .contact-container .form-container .form-group {
+  margin: 0 0 20px;
+}
+
+.contact .contact-container .form-container .form-group dl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact .contact-container .form-container .form-group dl dt {
+  width: 180px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.contact .contact-container .form-container .form-group dl dd {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: block;
+  -webkit-margin-start: 40px;
+          margin-inline-start: 40px;
+}
+
+.contact .contact-container .form-container .form-group dl dd input {
+  width: 520px;
+  padding: 14px;
+  font-size: 14px;
+  border: 1px solid #d9d9d9;
+  -webkit-box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.contact .contact-container .form-container .form-group dl dd textarea {
+  width: 520px;
+  height: 200px;
+  margin: 16px 0 0;
+  padding: 14px;
+  font-size: 14px;
+  border: 1px solid #d9d9d9;
+  -webkit-box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  resize: none;
+}
+
+.contact .contact-container .form-container .form-group.submit {
+  margin: 40px 0 0;
+  text-align: center;
+}
+
+.contact .contact-container .form-container .form-group.submit .form-btn {
+  width: 240px;
+  height: 60px;
+  background: #5396db;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+/* トップページへボタン */
+.top-btn {
+  margin: 20px auto;
+  width: 160px;
+  text-align: center;
+  padding: 0.5em 1em;
+  background: #668ad8;
+  /*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.top-btn:active {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  /*下に動く*/
+  -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  /*影を小さく*/
+  border-bottom: none;
+}
+
+/* フッター */
+footer {
+  padding-top: 30px;
+}
+
+footer .container p {
+  color: #b3aeb5;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* タブレット向けレイアウト */
+@media screen and (max-width: 1000px) {
+  .game {
+    margin-bottom: 50px;
+  }
+  footer {
+    text-align: center;
+  }
+  .top-wrapper h1 {
+    font-size: 32px !important;
+  }
+  .heading h2 {
+    font-size: 20px !important;
+  }
+}
+
+/* スマホ向けレイアウト */
+@media screen and (max-width: 670px) {
+  .header-right {
+    display: none;
+  }
+  .game {
+    width: 100%;
+  }
+  .btn {
+    width: 100%;
+  }
+  .top-wrapper {
+    text-align: left;
+  }
+  .top-wrapper h1 {
+    font-size: 24px !important;
+  }
+  .top-wrapper p {
+    font-size: 14px !important;
+  }
+  .menu {
+    display: block !important;
+  }
+  .faq .container {
+    width: 100%;
+  }
+  .faq .container h3 {
+    font-size: 32px !important;
+  }
+  .contact-container {
+    width: 100% !important;
+  }
+  .contact-container h3 {
+    font-size: 32px !important;
+  }
+}
+
+/* ページネーション */
+.page {
+  background-color: #7db4e6;
+  color: white;
+  text-align: center;
+  margin-right: 2px;
+  display: inline-block;
+  width: 16px;
+}
+
+.page a {
+  color: white;
+}
+
+.next {
+  background-color: #7db4e6;
+  text-align: center;
+  margin-right: 2px;
+  display: inline-block;
+  width: 60px;
+}
+
+.next a {
+  color: white;
+}
+
+.last {
+  background-color: #7db4e6;
+  text-align: center;
+  display: inline-block;
+  width: 60px;
+}
+
+.last a {
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */

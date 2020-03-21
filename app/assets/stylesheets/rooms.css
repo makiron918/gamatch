@@ -1,0 +1,122 @@
+@charset "UTF-8";
+.contents_row {
+  height: auto;
+  width: 1170px;
+  margin: 0 auto;
+  padding: 60px 16px 16px 16px;
+  background-color: #f7f7f7;
+}
+
+.chat-title {
+  padding: 0.25em 0.5em;
+  /*上下 左右の余白*/
+  color: #494949;
+  /*文字色*/
+  background: transparent;
+  /*背景透明に*/
+  border-left: solid 5px #7db4e6;
+  /*左線*/
+  margin-bottom: 10px;
+}
+
+.chat-members h4 {
+  margin-bottom: 10px;
+  color: #364e96;
+  /*文字色*/
+  padding: 0.5em 0;
+  /*上下の余白*/
+  border-top: solid 3px #364e96;
+  /*上線*/
+  border-bottom: solid 3px #364e96;
+  /*下線*/
+  width: 80px;
+  text-align: center;
+}
+
+.chat-members a {
+  padding-right: 10px;
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+}
+
+.chat-members a:hover {
+  letter-spacing: 5px;
+}
+
+.message .message-text {
+  position: relative;
+  padding: 0.6em;
+  background: #e0edff;
+  width: auto;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.message .message-text .message__time {
+  margin-left: 10px;
+  font-size: 10px;
+  color: #999999;
+  line-height: 20px;
+}
+
+.message .message-text:after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 20px;
+  border: 15px solid transparent;
+  border-top: 15px solid #e0edff;
+  width: 0;
+  height: 0;
+}
+
+.send-btn {
+  margin: 10px 0;
+  position: relative;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #FFF;
+  background: #fd9535;
+  /*背景色*/
+  border-bottom: solid 2px #d27d00;
+  /*少し濃い目の色に*/
+  border-radius: 4px;
+  /*角の丸み*/
+  -webkit-box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+          box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+  font-weight: bold;
+}
+
+.send-btn:hover {
+  cursor: pointer;
+}
+
+.send-btn:active {
+  border-bottom: solid 2px #fd9535;
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.index-btn {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  border-left: solid 4px #668ad8;
+  border-right: solid 4px #668ad8;
+  color: #668ad8;
+  background: #e1f3ff;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.index-btn:hover {
+  background: #668ad8;
+  color: #FFF;
+}
+/*# sourceMappingURL=rooms.css.map */
