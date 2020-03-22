@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 2020_03_07_011719) do
   end
 
   create_table "games", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name", null: false
     t.string "platform", null: false
+    t.string "ancestry"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
