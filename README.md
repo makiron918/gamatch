@@ -39,8 +39,17 @@ https://stormy-scrubland-12010.herokuapp.com/
 オンラインで離れた人と一緒にゲームできるようになった世の中で。一人でも多くの人がより楽しくゲームをプレイできるようにとの思いを込めて作りました。
 
 ##DEMO
+https://gyazo.com/ed54647a755da090ffefd8fbae621a91
+https://gyazo.com/6083223f85f92dd5cccd894ec44457e0
+https://gyazo.com/a4e794211049d10ee9011567d973bc1a
+https://gyazo.com/98249ced5a84f37712ca8dede6854907
+https://gyazo.com/c12d215d6a8c976f3d282a7ef0383480
+https://gyazo.com/96fa082b2cd51264ba1f18546a3ebc70
 
 ##工夫したポイント
+user#indexの検索キーワードを、別テーブル(gameテーブル)のカラムの文字検索にしたことです。
+ユーザー名による検索ではなく、プレイしたゲームの名前やハードで検索できるようにしました。
+また、ユーザー間のルームを作成し、その中で連絡を取り合えるようにしたことです。
 
 ##使用技術
 HTML,CSS,jQuery,Ruby,Rails,MySQL,Heroku
@@ -48,3 +57,4 @@ HTML,CSS,jQuery,Ruby,Rails,MySQL,Heroku
 ##課題や今後実装したい機能
 相手がアクティブユーザーなのかどうかを見極めてからコンタクトをとりたいと思うので、最終ログイン時間がわかるようにしたい。
 もしくは、相手がログイン中かどうかを判別できるようにしたい。
+誰かからチャットでメッセージを送られた際に、通知が届いてすぐに気づけるようにしたい。
