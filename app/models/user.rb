@@ -22,7 +22,7 @@ class User < ApplicationRecord
 
   def self.search(search)
     if search
-      User.joins(:games).where('games.name LIKE(?) or games.platform LIKE(?)', "%#{search}%", "%#{search}%").uniq
+      User.joins(:games).where('games.platform LIKE(?)', "%#{search}%").uniq
     else
       User.all
     end

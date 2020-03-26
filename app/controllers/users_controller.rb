@@ -64,6 +64,6 @@ class UsersController < ApplicationController
         :intro, 
         :voice,
         :game_id, 
-        games_attributes:[:name, :platform, :id])
+        games_attributes:[:platform, :id])
     end
 end
