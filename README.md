@@ -23,6 +23,74 @@ Things you may want to cover:
 
 * ...
 
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+| nickname           | string | null: false |
+| email              | string | null: false |
+| encrypted_password | string | null: false |
+| image         | string ||
+| intro         | text   ||
+| voice         | string ||
+| age           | string ||
+| sex           | string ||
+
+### Association
+- has_many   :games,    through: :plays
+- has_many :plays,    dependent: :destroy
+- has_many :messages, dependent: :destroy
+- has_many :entries,  dependent: :destroy
+
+## gamesテーブル
+|Column|Type|Options|
+|------|----|-------|
+| platform           | string | null: false |
+| ancestry              | string | null: false |
+
+### Association
+- has_many :plays, dependent: :destroy
+- has_many :users, through: :plays
+
+## playsテーブル
+|Column|Type|Options|
+|------|----|-------|
+| user_id           | integer | null: false, foreign_key: true |
+| game_id           | integer | null: false, foreign_key: true |
+
+### Association
+- belongs_to :game
+- belongs_to :user
+
+## roomsテーブル
+|Column|Type|Options|
+|------|----|-------|
+| name           | string ||
+
+### Association
+- has_many :messages, dependent: :destroy
+- has_many :entries, dependent: :destroy
+
+## entriesテーブル
+|Column|Type|Options|
+|------|----|-------|
+| user_id           | integer | null: false, foreign_key: true |
+| room_id           | integer | null: false, foreign_key: true |
+
+### Association
+- belongs_to :user
+- belongs_to :room
+
+## messagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+| user_id           | integer | null: false, foreign_key: true |
+| room_id           | integer | null: false, foreign_key: true |
+| content           | string | null : false |
+
+### Association
+- belongs_to :user
+- belongs_to :room
+
 # GAMATCH
 
 ## 概要

@@ -12,7 +12,8 @@
 
       <div class="field">
         <%= f.label :image, "ユーザー画像" %><br/>
-        <%= f.file_field :image %>
+        <%= image_tag "no_image.png", height: "200", with: "200", id: :img_prev, class:"gazo" %>
+        <%= f.file_field :image, autofocus: true, autocomplete: "user_image" %>
       </div>
 
       <div class="field">
