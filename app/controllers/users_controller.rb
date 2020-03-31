@@ -19,13 +19,19 @@ class UsersController < ApplicationController
   def edit
     @user = User.find(params[:id])
     @user.games.build
+    @game_parent_array = ["---"]
+      Game.where(ancestry: nil).each do |parent|
+        @game_parent_array << parent.platform
+      end
   end
 
   def update
     user = User.find(params[:id])
     if user.update(user_params)
-
+      flash[:notice] = "ユーザー情報が登録完了しました！"
+      redirect_to user_path(current_user.id)
     else
+      flash[:error] = "入力に誤りがあります。もう一度入力してください。"
       render :edit
     end
   end
@@ -52,6 +58,11 @@ class UsersController < ApplicationController
       end
     end
   end
+
+    # 親カテゴリーが選択された後に動くアクション
+    def get_game_children
+      @game_children = Game.find_by(platform: params[:parent_platform], ancestry: nil).children
+    end
 
   private
     def user_params

@@ -109,4 +109,12 @@ $(function() {
       300
     );
   });
+
+
+  // $('.icon_image').error(function() {
+  //   $(this).attr({
+  //       src: '/images/no_image.png',
+  //       alt: 'no image'
+  //   });
+  // });
 });

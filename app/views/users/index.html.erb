@@ -10,7 +10,7 @@
 
   <% @users.each do |user| %>
     <div class="user-info">
-      <a href="/users/<%= user.id %>/about"><img src=<%= user.image %> class = "icon_image"></a>
+      <a href="/users/<%= user.id %>/about"><%= image_tag user.image.url, class: "icon_image" %></a>
 
       <div class="right-info">
         <%= link_to user.nickname, about_user_path(user) %>

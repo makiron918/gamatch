@@ -1,5 +1,15 @@
 <div class="contents_row">
   <div class="container">
     <h2>ゲーム登録画面</h2>
+
+    <%= form_for @game do |f| %>
+      <div class="field">
+        <%= f.label :platform %>
+        <%= f.select :platform, @game_parent_array, {}, {class: "game_select", id: "game_select"} %>
+      </div>
+      <div class="add-game">ゲームを追加</div>
+
+      <%= f.submit "登録する" %>
+    <% end %>
   </div>
 </div>
