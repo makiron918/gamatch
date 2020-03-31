@@ -24,7 +24,7 @@
 
         <%= f.fields_for :games do |game| %>
 
-          <div class="form-group">
+          <div class="game-category">
             <%= game.label :platform, 'ゲームのハード' %>
             <%= game.select :platform, @game_parent_array, {},   {class: "game_select", id: "game_select"} %>
           </div>
