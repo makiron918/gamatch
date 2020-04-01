@@ -24,15 +24,6 @@ set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
 set :unicorn_config_path, -> { "#{current_path}/config/unicorn.rb" }
 set :keep_releases, 5
 
-set :default_env, {
-  rbenv_root: "/home/user/.rbenv",
-  path: "/home/user/.rbenv/bin:$PATH",
-  region: "ap-northeast-1",
-  aws_access_key_id: Rails.application.credentials.aws[:access_key_id],
-  aws_secret_access_key: Rails.application.credentials.aws[:secret_access_key]
-}
-
-
 after 'deploy:publishing', 'deploy:restart'
 namespace :deploy do
   task :restart do
