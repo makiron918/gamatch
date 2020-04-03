@@ -7,7 +7,7 @@ $(function(){
     return html;
   }
   // 子カテゴリーの表示作成
-  function appendChidrenBox(insertHTML){
+  function appendChildrenBox(insertHTML){
     let childSelectHtml = '';
     childSelectHtml = `<div class='game-category' id= 'children_wrapper'>
                         <select class="game_select" id="child_category" name="user[game_id]">
@@ -33,7 +33,7 @@ $(function(){
         children.forEach(function(child){
           insertHTML += appendOption(child);
         });
-        appendChidrenBox(insertHTML);
+        appendChildrenBox(insertHTML);
       })
       .fail(function(){
         alert('カテゴリー取得に失敗しました');
