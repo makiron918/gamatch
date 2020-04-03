@@ -24,7 +24,7 @@ $(function(){
       $.ajax({
         url: 'get_game_children',
         type: 'GET',
-        data: { parent_name: parentGame},
+        data: { parent_name: parentCategory},
         dataType: 'json'
       })
       .done(function(children){
