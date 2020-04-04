@@ -22,13 +22,11 @@
           <%= f.file_field :image, autofocus: true, autocomplete: "user_image" %>
         </div>
 
-        <%= f.fields_for :games do |game| %>
 
-          <div class="game-category">
-            <%= game.label :platform, 'ゲームのハード' %>
-            <%= game.select :platform, @game_parent_array, {},   {class: "game_select", id: "game_select"} %>
-          </div>
-        <% end %>
+        <div class="game-category">
+          <%= f.label :platform, 'ゲームのハード' %>
+          <%= f.select :game_id, @game_parent_array, {},   {class: "game_select", id: "game_select"} %>
+        </div>
 
         <div class="row">
         <div class="col-xs-6 form-group">
