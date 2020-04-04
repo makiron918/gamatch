@@ -9,6 +9,9 @@ Rails.application.routes.draw do
     collection do
       get 'search'
     end
+    collection do
+      get 'get_game_children', defaults: { format: 'json' }
+    end
   end
   resources :games, only: [:new, :create, :edit, :update]
   resources :messages, only: :create
