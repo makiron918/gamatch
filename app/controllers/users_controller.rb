@@ -61,7 +61,7 @@ class UsersController < ApplicationController
 
     # 親カテゴリーが選択された後に動くアクション
     def get_game_children
-      @game_children = Game.find_by(platform: params[:parent_platform], ancestry: nil).children
+      @game_children = Game.find_by(platform: "#{params[:parent_platform]}", ancestry: nil).children
     end
 
   private

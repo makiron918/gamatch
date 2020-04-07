@@ -3,7 +3,7 @@ $(function(){
   if (document.URL.match("edit")) {
   // カテゴリーセレクトボックスのオプションを作成
   function appendOption(category){
-    let html = `<option value="${game.id}" data-category="${game.platform}">${game.platform}</option>`;
+    let html = `<option value="${game.platform}" data-category="${game.id}">${game.platform}</option>`;
     return html;
   }
   // 子カテゴリーの表示作成
