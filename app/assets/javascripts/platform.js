@@ -2,7 +2,7 @@ $(function(){
   // editページのみJS
   if (document.URL.match("edit")) {
   // カテゴリーセレクトボックスのオプションを作成
-  function appendOption(category){
+  function appendOption(game){
     let html = `<option value="${game.platform}" data-category="${game.id}">${game.platform}</option>`;
     return html;
   }
@@ -22,9 +22,9 @@ $(function(){
     let parentCategory = document.getElementById('game_select').value; //選択された親カテゴリーの名前を取得
     if (parentCategory != "---"){ //親カテゴリーが初期値でないことを確認
       $.ajax({
-        url: 'get_game_children',
+        url: '/users/get_game_children',
         type: 'GET',
-        data: { parent_name: parentCategory},
+        data: { parent_platform: parentCategory},
         dataType: 'json'
       })
       .done(function(children){
@@ -37,6 +37,9 @@ $(function(){
       })
       .fail(function(){
         alert('カテゴリー取得に失敗しました');
+        console.log("XMLHttpRequest : " + XMLHttpRequest.status);
+        console.log("textStatus     : " + textStatus);
+        console.log("errorThrown    : " + errorThrown.message);
       })
     }else{
       $('#children_wrapper').remove(); //親カテゴリーが初期値になった時、子以下を削除する
