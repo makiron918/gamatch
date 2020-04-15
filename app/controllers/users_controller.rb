@@ -74,7 +74,6 @@ class UsersController < ApplicationController
         :sex, 
         :intro, 
         :voice,
-        :game_id, 
         games_attributes:[:platform, :id])
     end
 end
