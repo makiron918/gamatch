@@ -3,14 +3,14 @@ $(function(){
   if (document.URL.match("edit")) {
   // カテゴリーセレクトボックスのオプションを作成
   function appendOption(game){
-    let html = `<option value="${game.platform}" data-category="${game.id}">${game.platform}</option>`;
+    let html = `<option value="${game.id}" data-category="${game.id}">${game.platform}</option>`;
     return html;
   }
   // 子カテゴリーの表示作成
   function appendChildrenBox(insertHTML){
     let childSelectHtml = '';
     childSelectHtml = `<div class='game-category' id= 'children_wrapper'>
-                        <select class="game_select" id="child_category" name="user[game_id]">
+                        <select class="game_select" id="child_category" name="user[game_ids][]">
                           <option value="---" data-category="---">---</option>
                           ${insertHTML}
                         <select>

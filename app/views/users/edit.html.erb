@@ -19,15 +19,13 @@
         <div class="form-group">
           <%= f.label :image, 'ユーザー画像' %><br/>
           <%= image_tag current_user.image.to_s, id: :img_prev, class:"gazo", onerror: "this.src='images/no_image.png'", height: "200", with: "200" %>
-          <%= f.file_field :image, autofocus: true, autocomplete: "user_image" %>
+          <%= f.file_field :image %>
         </div>
 
 
         <div class="game-category">
-          <%= f.fields_for :games do |g| %>
-            <%= g.label :platform, 'ゲームのハード' %>
-            <%= g.select :platform, @game_parent_array, {},   {class: "game_select", id: "game_select"} %>
-          <% end %>
+          <%= f.label :platform, 'ゲームのハード' %>
+          <%= f.select :platform, @game_parent_array, {},   {class: "game_select", id: "game_select"} %>
         </div>
 
         <div class="row">
