@@ -29,7 +29,6 @@ class UsersController < ApplicationController
     user = User.find(params[:id])
     if user.update(user_params)
       flash[:notice] = "ユーザー情報が登録完了しました！"
-      redirect_to user_path(current_user.id)
     else
       flash[:error] = "入力に誤りがあります。もう一度入力してください。"
       render :edit
