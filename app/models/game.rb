@@ -6,7 +6,5 @@ class Game < ApplicationRecord
 
   validates :platform, presence: true
 
-  scope :id_is, -> id {
-    where(id: id)
-  }
+
 end

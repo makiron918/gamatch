@@ -15,7 +15,7 @@ class User < ApplicationRecord
   has_many :entries, dependent: :destroy
   has_many :plays
   has_many :games, through: :plays
-  accepts_nested_attributes_for :games, allow_destroy: true
+  # accepts_nested_attributes_for :games, allow_destroy: true
   # scope :has_game_id, -> game_id {
     # joins(:games).merge(Game.where(id: game_id))
   # }

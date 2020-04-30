@@ -7,44 +7,42 @@
       <%= form_with(model: @user, local: true) do |f| %>
 
         <div class="form-group">
-        <%= f.label :nickname, 'ニックネーム' %><br>
-        <%= f.text_field :nickname, autofocus: true, maxlength: "10", size: "20x28", class: 'form-control' %>
+          <%= f.label :nickname, 'ニックネーム' %><br>
+          <%= f.text_field :nickname, autofocus: true, maxlength: "10", size: "20x28", class: 'form-control' %>
         </div>
 
         <div class="form-group">
-        <%= f.label :email, 'メールアドレス' %><br>
-        <%= f.email_field :email, class: 'form-control' %>
+          <%= f.label :email, 'メールアドレス' %><br>
+          <%= f.email_field :email, class: 'form-control' %>
         </div>
 
         <div class="form-group">
           <%= f.label :image, 'ユーザー画像' %><br/>
           <%= image_tag current_user.image.to_s, id: :img_prev, class:"gazo", onerror: "this.src='images/no_image.png'", height: "200", with: "200" %>
-          <%= f.file_field :image, autofocus: true, autocomplete: "user_image" %>
+          <%= f.file_field :image %>
         </div>
 
-        <%= f.fields_for :games do |game| %>
 
-          <div class="game-category">
-            <%= game.label :platform, 'ゲームのハード' %>
-            <%= game.select :platform, @game_parent_array, {},   {class: "game_select", id: "game_select"} %>
-          </div>
-        <% end %>
+        <div class="game-category">
+          <%= f.label :platform, 'ゲームのハード' %>
+          <%= f.select :platform, @game_parent_array, {},   {class: "game_select", id: "game_select"} %>
+        </div>
 
         <div class="row">
-        <div class="col-xs-6 form-group">
+          <div class="col-xs-6 form-group">
             <%= f.label :age, '年齢', class:'control-label' %>
             <%= f.select :age, [["",""], ["10代","10"], ["20代","20"], ["30代","30"], ["40代","40"], ["50代","50"], ["60代","60"], ["70代以上","70"] ], {},   class: 'form-control' %>
-        </div>
+          </div>
 
-        <div class="col-xs-6 form-group">
+          <div class="col-xs-6 form-group">
             <%= f.label :sex, '性別', class:'control-label' %>
             <%= f.select :sex, [["",""], ["女性","女性"], ["男性","男性"]], {},   class: 'form-control' %>
-        </div>
+          </div>
 
-        <div class="col-xs-6 form-group">
+          <div class="col-xs-6 form-group">
             <%= f.label :voice, 'ボイスチャット', class:'control-label' %>
             <%= f.select :voice, [["",""], ["あり","あり"], ["なし","なし"]], {},   class: 'form-control' %>
-        </div>
+          </div>
         </div>
 
         <div class="form-group">
@@ -56,7 +54,7 @@
         </div>
 
         <div class="al-c">
-        <%= f.submit '更新する', class: 'btn btn-primary' %>
+          <%= f.submit '更新する', class: 'btn btn-primary' %>
         </div>
 
       <% end %>
